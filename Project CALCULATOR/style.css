@@ -1,0 +1,39 @@
+
+
+.container {
+    margin: 50px auto;
+    width: 300px;
+    height: 500px;
+    color:#fff ;  
+    background:black ;
+    padding: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #4f4f4f4f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    width: 60px;
+    height: 60px;
+    
+    background: #333; ;
+    border-radius: 20% ;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn-insertion {
+    filter: brightness(130%);
+}
+
+.btn-pressed {
+    filter: brightness(60%);
+}
+
