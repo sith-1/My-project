@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Игра в угадывание чисел</title>
+ <style>
+  body {
+   font-family: Arial, sans-serif;
+   text-align: center;
+  }
+  h1 {
+   font-size: 36px;
+   margin-top: 50px;
+  }
+  button {
+   padding: 10px;
+   margin-top: 20px;
+   background-color: #4CAF50;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   font-size: 24px;
+   cursor: pointer;
+  }
+  input[type="number"] {
+   padding: 10px;
+   margin-top: 20px;
+   font-size: 24px;
+   border-radius: 5px;
+   border: none;
+   text-align: center;
+  }
+  #result {
+   margin-top: 20px;
+   font-size: 24px;
+  }
+ </style>
+</head>
+<body>
+ <h1>Угадай число от 1 до 100</h1>
+ <input type="number" id="guess" placeholder="Введите число">
+ <button onclick="checkGuess()">Проверить</button>
+ <div id="result"></div>
+ <script>
+  var randomNumber = Math.floor(Math.random() * 100) + 1;
+  var guesses = 0;
+  function checkGuess() {
+   var guess = document.getElementById("guess").value;
+   guesses++;
+   if (guess == randomNumber) {
+    document.getElementById("result").innerHTML = "Поздравляем! Вы угадали число за " + guesses + " попыток!";
+   } else if (guess < randomNumber) {
+    document.getElementById("result").innerHTML = "Загаданное число больше, чем " + guess + ". Попробуйте еще раз.";
+   } else {
+    document.getElementById("result").innerHTML = "Загаданное число меньше, чем " + guess + ". Попробуйте еще раз.";
+   }
+  }
+ </script>
+</body>
+</html>
